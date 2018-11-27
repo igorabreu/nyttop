@@ -1,1 +1,1 @@
-##New York Times - Top Stories Feed
+## New York Times - Top Stories Feed
