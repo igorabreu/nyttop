@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Header from "../../organisms/Header";
 import Feed from "../../organisms/Feed";
+import ModalArticle from "../../organisms/ModalArticle";
 import { getTopNews } from "../../../services/API";
-import { Link } from "react-router-dom";
 import "./style.scss";
 
 class Home extends Component {
@@ -10,7 +10,9 @@ class Home extends Component {
     super(props);
     this.state = {
       contentNews: [],
-      currentSection: "politics"
+      currentSection: "politics",
+      articleIndex: 0,
+      modalVisible: false
     };
   }
 
@@ -29,19 +31,46 @@ class Home extends Component {
       });
   }
 
-  handleSelection(type) {
+  handleSection(section) {
+    this.setState(
+      {
+        currentSection: section
+      },
+      () => {
+        this.fecthContent();
+      }
+    );
+  }
+
+  handleSelection(articleIndex) {
     this.setState({
-      currentSection: type
+      articleIndex
     });
-    this.fecthContent();
+    this.handleModal(true);
+    console.log("hey");
+  }
+
+  handleModal(state) {
+    this.setState({
+      modalVisible: state
+    });
   }
 
   render() {
-    const { contentNews } = this.state;
+    const { contentNews, articleIndex, modalVisible } = this.state;
     return (
       <div className="Home">
-        <Header handleSelection={type => this.handleSelection(type)} />
-        <Feed content={contentNews} />
+        <Header handleSection={section => this.handleSection(section)} />
+        <Feed
+          content={contentNews}
+          handleSelection={articleIndex => this.handleSelection(articleIndex)}
+        />
+        {modalVisible ? (
+          <ModalArticle
+            content={contentNews[articleIndex]}
+            handleModal={() => this.handleModal(false)}
+          />
+        ) : null}
       </div>
     );
   }

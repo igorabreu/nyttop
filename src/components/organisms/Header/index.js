@@ -4,10 +4,10 @@ import "./style.scss";
 
 class Header extends Component {
   render() {
-    const { handleSelection } = this.props;
+    const { handleSection } = this.props;
     return (
       <div className="Header">
-        <NavBar handleSelection={type => handleSelection(type)} />
+        <NavBar handleSection={section => handleSection(section)} />
       </div>
     );
   }

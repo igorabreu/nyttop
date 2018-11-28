@@ -4,18 +4,15 @@ import "./style.scss";
 
 class NewsCard extends Component {
   render() {
-    const { content } = this.props;
+    const { content, handleSelection } = this.props;
     return (
       <div className="NewsCard">
         {content.map((article, index) => {
           return (
-            <div key={index}>
+            <div key={index} onClick={() => handleSelection(index)}>
               <h5>{article.title}</h5>
-              <Thumbnail
-                imageUrl={
-                  article.multimedia[1] ? article.multimedia[1].url : null
-                }
-              />
+              <div>{article.published_date}</div>
+              <div>{article.byline}</div>
             </div>
           );
         })}

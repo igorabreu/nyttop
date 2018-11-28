@@ -4,10 +4,13 @@ import "./style.scss";
 
 class Feed extends Component {
   render() {
-    const { content } = this.props;
+    const { content, handleSelection } = this.props;
     return (
       <div className="Feed">
-        <NewsCard content={content} />
+        <NewsCard
+          content={content}
+          handleSelection={articleIndex => handleSelection(articleIndex)}
+        />
       </div>
     );
   }

@@ -1,10 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import "./style.scss";
 
-class NavBar extends Component {
-  render() {
-    return <div className="NavBar">NavBar</div>;
-  }
-}
+const Title = ({ text }) => (
+  <div className="Title">
+    <div>{text}</div>
+  </div>
+);
 
-export default NavBar;
+Title.propTypes = {
+  text: PropTypes.string
+};
+
+Title.defaultProps = {
+  text: "Politcs"
+};
+
+export default Title;
