@@ -1,0 +1,11 @@
+@import "./variables.scss";
+@import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: "Source Serif Pro", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

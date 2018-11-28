@@ -1,20 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
+import dateConverter from "../../../utils/dateFormat";
 import "./style.scss";
 
-const ArticleHeader = ({ content }) => (
+const ArticleHeader = ({ title, published_date, byline, kicker }) => (
   <div className="ArticleHeader">
-    <div className="Title">{content.title}</div>
-    <div className="Kicker">{content.kicker}</div>
+    <h1 className="title">{title}</h1>
+    <div className="published-date">{dateConverter(published_date)}</div>
+    <div className="byline">{byline}</div>
+    <div className="kicker">{kicker}</div>
   </div>
 );
 
 ArticleHeader.propTypes = {
-  text: PropTypes.string
+  title: PropTypes.string,
+  published_date: PropTypes.string,
+  byline: PropTypes.string,
+  kicker: PropTypes.string
 };
 
 ArticleHeader.defaultProps = {
-  text: ""
+  title: "",
+  published_date: "",
+  byline: "",
+  kicker: ""
 };
 
 export default ArticleHeader;

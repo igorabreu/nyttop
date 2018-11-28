@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NewsCard from "../../molecules/NewsCard";
+import ArticleCard from "../../molecules/ArticleCard";
 import "./style.scss";
 
 class Feed extends Component {
@@ -7,10 +7,15 @@ class Feed extends Component {
     const { content, handleSelection } = this.props;
     return (
       <div className="Feed">
-        <NewsCard
-          content={content}
-          handleSelection={articleIndex => handleSelection(articleIndex)}
-        />
+        {content.map((article, index) => {
+          return (
+            <ArticleCard
+              key={index}
+              handleSelection={() => handleSelection(index)}
+              {...article}
+            />
+          );
+        })}
       </div>
     );
   }

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import Header from "../../organisms/Header";
 import Feed from "../../organisms/Feed";
-import ModalArticle from "../../organisms/ModalArticle";
+import ModalMenu from "../../organisms/ModalMenu";
 import { getTopNews } from "../../../services/API";
 import "./style.scss";
+import ModalArticle from "../../organisms/ModalArticle";
 
 class Home extends Component {
   constructor(props) {
@@ -11,13 +12,11 @@ class Home extends Component {
     this.state = {
       contentNews: [],
       currentSection: "politics",
+      sectionTitle: "Política",
       articleIndex: 0,
-      modalVisible: false
+      modalMenuVisible: false,
+      modalArticleVisible: false
     };
-  }
-
-  componentDidMount() {
-    this.fecthContent();
   }
 
   fecthContent() {
@@ -31,44 +30,71 @@ class Home extends Component {
       });
   }
 
-  handleSection(section) {
+  handleSection(section, sectionTitle) {
     this.setState(
       {
-        currentSection: section
+        currentSection: section,
+        sectionTitle
       },
       () => {
         this.fecthContent();
       }
     );
+    this.handleModalMenu(false);
   }
 
   handleSelection(articleIndex) {
     this.setState({
       articleIndex
     });
-    this.handleModal(true);
-    console.log("hey");
+    this.handleModalArticle(true);
   }
 
-  handleModal(state) {
+  handleModalMenu(state) {
     this.setState({
-      modalVisible: state
+      modalMenuVisible: state
     });
   }
 
+  handleModalArticle(state) {
+    this.setState({
+      modalArticleVisible: state
+    });
+  }
+
+  componentDidMount() {
+    this.fecthContent();
+  }
+
   render() {
-    const { contentNews, articleIndex, modalVisible } = this.state;
+    const {
+      contentNews,
+      articleIndex,
+      modalMenuVisible,
+      modalArticleVisible,
+      sectionTitle
+    } = this.state;
     return (
       <div className="Home">
-        <Header handleSection={section => this.handleSection(section)} />
+        <Header
+          handleModalMenu={() => this.handleModalMenu(true)}
+          sectionTitle={sectionTitle}
+        />
         <Feed
           content={contentNews}
           handleSelection={articleIndex => this.handleSelection(articleIndex)}
         />
-        {modalVisible ? (
+        {modalMenuVisible ? (
+          <ModalMenu
+            handleSection={(section, sectionTitle) =>
+              this.handleSection(section, sectionTitle)
+            }
+          />
+        ) : null}
+        {modalArticleVisible ? (
           <ModalArticle
             content={contentNews[articleIndex]}
-            handleModal={() => this.handleModal(false)}
+            closeModal={() => this.handleModalArticle(false)}
           />
         ) : null}
       </div>

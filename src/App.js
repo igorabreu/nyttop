@@ -6,8 +6,7 @@ import {
   Switch
 } from "react-router-dom";
 import Home from "./components/templates/Home";
-import SingleArticle from "./components/templates/SingleArticle";
-import "./App.scss";
+import "./components/_settings/base.scss";
 
 class App extends Component {
   render() {
@@ -15,7 +14,6 @@ class App extends Component {
       <Router>
         <Switch>
           <Route path="/nyttop" component={Home} />
-          <Route path="/about" component={SingleArticle} />
           <Redirect from="/" to="/nyttop" />
         </Switch>
       </Router>

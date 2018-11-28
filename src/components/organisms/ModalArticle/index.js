@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import Article from "../../organisms/Article";
+import Article from "../../molecules/Article";
 import "./style.scss";
 
 class ModalArticle extends Component {
   render() {
-    const { content, handleModal } = this.props;
+    const { content, closeModal } = this.props;
     return (
-      <div className="ModalArticle" onClick={() => handleModal()}>
-        <Article content={content} />
+      <div className="ModalArticle">
+        <Article content={content} closeModal={() => closeModal()} />
       </div>
     );
   }

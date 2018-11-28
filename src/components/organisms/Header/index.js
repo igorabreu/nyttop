@@ -4,10 +4,13 @@ import "./style.scss";
 
 class Header extends Component {
   render() {
-    const { handleSection } = this.props;
+    const { handleModalMenu, sectionTitle } = this.props;
     return (
       <div className="Header">
-        <NavBar handleSection={section => handleSection(section)} />
+        <NavBar
+          handleModalMenu={() => handleModalMenu()}
+          sectionTitle={sectionTitle}
+        />
       </div>
     );
   }
