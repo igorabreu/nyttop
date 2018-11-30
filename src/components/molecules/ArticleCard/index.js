@@ -18,7 +18,9 @@ const ArticleCard = ({
       onClick={() => handleSelection(index)}
     >
       <CardHeader {...{ title, byline, published_date }} />
-      {multimedia[1] ? <Thumbnail imageUrl={multimedia[1].url} /> : null}
+      <div className="thumb-image">
+        {multimedia[1] ? <Thumbnail imageUrl={multimedia[1].url} /> : null}
+      </div>
     </div>
   );
 };

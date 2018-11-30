@@ -4,6 +4,10 @@
   margin-bottom: 30px;
   cursor: pointer;
   width: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media (min-width: 768px) {
     width: 25vw;
@@ -17,8 +21,6 @@
   }
 
   &.centered {
-    display: flex;
     justify-content: center;
-    flex-direction: column;
   }
 }

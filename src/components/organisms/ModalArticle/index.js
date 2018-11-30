@@ -1,16 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import Article from "../../molecules/Article";
+import PropTypes from "prop-types";
 import "./style.scss";
 
-class ModalArticle extends Component {
-  render() {
-    const { content, closeModal } = this.props;
-    return (
-      <div className="ModalArticle">
-        <Article content={content} handleModalMenu={() => closeModal()} />
-      </div>
-    );
-  }
-}
+const ModalArticle = ({ content, closeModal }) => {
+  return (
+    <div className="ModalArticle">
+      <Article content={content} handleModalMenu={() => closeModal()} />
+    </div>
+  );
+};
+
+ModalArticle.propTypes = {
+  content: PropTypes.array,
+  closeModal: PropTypes.func
+};
 
 export default ModalArticle;
