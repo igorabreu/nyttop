@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  nyttop:
+    image: nyttop
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/usr/src/app
+    entrypoint: "tail -f /dev/null"

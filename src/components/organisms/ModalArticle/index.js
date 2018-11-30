@@ -12,7 +12,7 @@ const ModalArticle = ({ content, closeModal }) => {
 };
 
 ModalArticle.propTypes = {
-  content: PropTypes.array,
+  content: PropTypes.object,
   closeModal: PropTypes.func
 };
 

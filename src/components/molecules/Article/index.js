@@ -20,7 +20,7 @@ const Article = ({ content, handleModalMenu }) => {
 };
 
 Article.propTypes = {
-  content: PropTypes.array,
+  content: PropTypes.object,
   handleSelection: PropTypes.func
 };
 

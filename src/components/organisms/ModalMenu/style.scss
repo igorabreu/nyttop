@@ -1,9 +1,11 @@
+@import "../../_settings/variables.scss";
+
 .ModalMenu {
   position: fixed;
   height: 100%;
   width: 100%;
-  background: #000;
-  color: #fff;
+  background: $black;
+  color: $white;
   z-index: 999;
   animation: blurIn 1s;
   top: 0;

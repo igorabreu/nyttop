@@ -1,5 +1,7 @@
+@import "../../_settings/variables.scss";
+
 .ArticleCard {
-  border: 1px solid #c5c5c5;
+  border: 1px solid $lightGray;
   padding: 20px 20px;
   margin-bottom: 30px;
   cursor: pointer;
