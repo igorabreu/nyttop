@@ -6,6 +6,8 @@ New York Times Top Stories feed app, buit using Top Stories API from [New York T
 
 The app follows the methodology of [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), separating the components to build a consistent, solid and reusable system, using nomenclatures from analogy with chemistry (atoms, molecules, organism and models).
 
+<img width="100%" alt="atomic design" src="https://user-images.githubusercontent.com/4838076/33235048-d083dca6-d217-11e7-9aea-9a5ef5ae6fe7.png">
+
 References: [article reference](https://www.creativebloq.com/web-design/10-reasons-you-should-be-using-atomic-design-61620771), [project reference](https://github.com/danilowoz/react-atomic-design).
 
 ### Project Setup
