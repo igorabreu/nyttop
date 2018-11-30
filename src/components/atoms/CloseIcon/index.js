@@ -19,7 +19,8 @@ const CloseIcon = ({ fill, handleModalMenu }) => (
 );
 
 CloseIcon.propTypes = {
-  fill: PropTypes.string
+  fill: PropTypes.string,
+  handleModalMenu: PropTypes.func
 };
 
 CloseIcon.defaultProps = {

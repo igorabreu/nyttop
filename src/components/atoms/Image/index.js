@@ -9,7 +9,7 @@ const Image = ({ imageUrl }) => (
 );
 
 Image.propTypes = {
-  fill: PropTypes.string
+  imageUrl: PropTypes.string
 };
 
 export default Image;

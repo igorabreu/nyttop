@@ -8,8 +8,4 @@ Abstract.propTypes = {
   abstract: PropTypes.string
 };
 
-Abstract.defaultProps = {
-  abstract: ""
-};
-
 export default Abstract;

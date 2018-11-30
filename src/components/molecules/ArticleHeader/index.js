@@ -26,14 +26,8 @@ ArticleHeader.propTypes = {
   title: PropTypes.string,
   published_date: PropTypes.string,
   byline: PropTypes.string,
-  kicker: PropTypes.string
-};
-
-ArticleHeader.defaultProps = {
-  title: "",
-  published_date: "",
-  byline: "",
-  kicker: ""
+  kicker: PropTypes.string,
+  handleModalMenu: PropTypes.func
 };
 
 export default ArticleHeader;

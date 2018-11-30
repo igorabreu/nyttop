@@ -21,7 +21,8 @@ const MenuIcon = ({ fill, handleModalMenu }) => (
 );
 
 MenuIcon.propTypes = {
-  fill: PropTypes.string
+  fill: PropTypes.string,
+  handleModalMenu: PropTypes.func
 };
 
 MenuIcon.defaultProps = {

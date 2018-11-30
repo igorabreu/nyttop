@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import Header from "../../organisms/Header";
 import Feed from "../../organisms/Feed";
 import ModalMenu from "../../organisms/ModalMenu";
-import { getTopNews } from "../../../services/API";
-import "./style.scss";
 import ModalArticle from "../../organisms/ModalArticle";
+import { getTopNews } from "../../../services/API";
 
 class Home extends Component {
   constructor(props) {
@@ -74,6 +73,7 @@ class Home extends Component {
       modalArticleVisible,
       sectionTitle
     } = this.state;
+
     return (
       <div className="Home">
         <Header

@@ -24,8 +24,4 @@ Article.propTypes = {
   handleSelection: PropTypes.func
 };
 
-Article.defaultProps = {
-  content: []
-};
-
 export default Article;

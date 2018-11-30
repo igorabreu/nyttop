@@ -24,12 +24,14 @@ const ArticleCard = ({
     </div>
   );
 };
-ArticleCard.propTypes = {
-  abstract: PropTypes.string
-};
 
-ArticleCard.defaultProps = {
-  abstract: ""
+ArticleCard.propTypes = {
+  title: PropTypes.string,
+  byline: PropTypes.string,
+  published_date: PropTypes.string,
+  multimedia: PropTypes.array,
+  index: PropTypes.number,
+  handleSelection: PropTypes.func
 };
 
 export default ArticleCard;

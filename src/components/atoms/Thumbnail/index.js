@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./style.scss";
 
 const Thumbnail = ({ imageUrl }) => (
   <div className="Thumbnail">
@@ -9,7 +8,7 @@ const Thumbnail = ({ imageUrl }) => (
 );
 
 Thumbnail.propTypes = {
-  text: PropTypes.string
+  imageUrl: PropTypes.string
 };
 
 export default Thumbnail;
