@@ -6,8 +6,9 @@ const CloseIcon = ({ fill, handleModalMenu }) => (
   <svg
     width="24"
     height="24"
-    fill-rule="evenodd"
-    clip-rule="evenodd"
+    fillRule="evenodd"
+    clipRule="evenodd"
+    className="CloseIcon"
     onClick={() => handleModalMenu()}
   >
     <path

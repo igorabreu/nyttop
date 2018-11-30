@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Feed from "../../Feed";
+import ModalMenu from "..";
 
-it("NavBar renders without crashing", () => {
+it("ModalMenu component renders without crashing", () => {
   const div = document.createElement("div");
-  ReactDOM.render(<Feed />, div);
+  ReactDOM.render(<ModalMenu />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

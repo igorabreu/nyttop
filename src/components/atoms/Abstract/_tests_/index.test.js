@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Feed from "../../Feed";
+import Abstract from "..";
 
-it("NavBar renders without crashing", () => {
+it("Abstract component renders without crashing", () => {
   const div = document.createElement("div");
-  ReactDOM.render(<Feed />, div);
+  ReactDOM.render(<Abstract />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

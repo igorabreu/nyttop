@@ -6,8 +6,8 @@ const MenuIcon = ({ fill, handleModalMenu }) => (
   <svg
     width="24"
     height="24"
-    fill-rule="evenodd"
-    clip-rule="evenodd"
+    fillRule="evenodd"
+    clipRule="evenodd"
     fill={fill}
     className="MenuIcon"
     onClick={() => handleModalMenu()}

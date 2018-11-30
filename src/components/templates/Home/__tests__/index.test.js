@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "../Home";
+import Home from "..";
 
-it("Home renders without crashing", () => {
+it("Home component renders without crashing", () => {
   const div = document.createElement("div");
   ReactDOM.render(<Home />, div);
   ReactDOM.unmountComponentAtNode(div);

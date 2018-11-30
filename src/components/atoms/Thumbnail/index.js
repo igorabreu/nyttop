@@ -1,15 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import "./style.scss";
 
-class Thumbnail extends Component {
-  render() {
-    const { imageUrl } = this.props;
-    return (
-      <div className="Thumbnail">
-        <img src={imageUrl} alt="thumb_news" />
-      </div>
-    );
-  }
-}
+const Thumbnail = ({ imageUrl }) => (
+  <div className="Thumbnail">
+    <img src={imageUrl} alt="thumb_news" />
+  </div>
+);
+
+Thumbnail.propTypes = {
+  text: PropTypes.string
+};
 
 export default Thumbnail;

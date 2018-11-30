@@ -1,0 +1,10 @@
+.SectionTitle {
+  h1 {
+    font-size: 1.9rem;
+    max-width: 200px;
+    @media (min-width: 768px) {
+      max-width: 800px;
+      font-size: 2.1rem;
+    }
+  }
+}

@@ -14,16 +14,23 @@
     width: 100%;
     padding: 0;
     li {
-      font-size: 2rem;
+      font-size: 1.8rem;
       list-style: none;
       margin-bottom: 15px;
       cursor: pointer;
+      span {
+        position: relative;
+        width: 100%;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
   .closeIcon {
     position: absolute;
     right: 30px;
-    top: 30px;
+    top: 45px;
   }
 }
 

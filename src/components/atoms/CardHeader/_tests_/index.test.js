@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import ArticleCard from "..";
+import CardHeader from "..";
 
-it("ArticleCard component renders without crashing", () => {
+it("Cardheader component renders without crashing", () => {
   const div = document.createElement("div");
-  ReactDOM.render(<ArticleCard />, div);
+  ReactDOM.render(<CardHeader />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

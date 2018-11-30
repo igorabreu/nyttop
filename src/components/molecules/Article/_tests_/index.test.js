@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Feed from "../../Feed";
+import Article from "..";
 
-it("Feed renders without crashing", () => {
+it("Article component renders without crashing", () => {
   const div = document.createElement("div");
-  ReactDOM.render(<Feed />, div);
+  ReactDOM.render(<Article />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

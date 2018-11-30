@@ -1,15 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import "./style.scss";
 
-class Image extends Component {
-  render() {
-    const { imageUrl } = this.props;
-    return (
-      <div className="Image">
-        <img src={imageUrl} alt="thumbnail" />
-      </div>
-    );
-  }
-}
+const Image = ({ imageUrl }) => (
+  <div className="Image">
+    <img src={imageUrl} alt="thumbnail" />
+  </div>
+);
+
+Image.propTypes = {
+  fill: PropTypes.string
+};
 
 export default Image;

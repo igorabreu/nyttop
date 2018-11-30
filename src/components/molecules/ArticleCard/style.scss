@@ -1,28 +1,24 @@
 .ArticleCard {
   border: 1px solid #c5c5c5;
-  width: 25vw;
   padding: 20px 20px;
-  margin-right: 30px;
   margin-bottom: 30px;
+  cursor: pointer;
+  width: 250px;
+
+  @media (min-width: 768px) {
+    width: 25vw;
+    margin-right: 30px;
+  }
+
+  &:hover {
+    .title {
+      opacity: 0.6;
+    }
+  }
 
   &.centered {
     display: flex;
     justify-content: center;
     flex-direction: column;
-  }
-
-  @media (max-width: 1024px) {
-    width: 250px;
-  }
-  .title {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-  }
-  .byline {
-    font-size: 0.8rem;
-  }
-  .publish-date {
-    font-size: 0.8rem;
-    margin-bottom: 10px;
   }
 }

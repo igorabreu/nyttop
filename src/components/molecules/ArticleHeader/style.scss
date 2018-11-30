@@ -1,0 +1,23 @@
+.ArticleHeader {
+  margin-bottom: 40px;
+  .closeIcon {
+    position: absolute;
+    right: 30px;
+    top: 45px;
+  }
+  .title {
+    font-size: 1.7rem;
+    width: 100%;
+    margin-bottom: 7px;
+    margin-top: 100px;
+    @media (min-width: 768px) {
+      width: 70vw;
+    }
+  }
+  .published-date {
+    font-size: 0.8rem;
+  }
+  .byline {
+    font-size: 0.8rem;
+  }
+}
