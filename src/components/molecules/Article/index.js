@@ -10,7 +10,7 @@ const Article = ({ content, handleModalMenu }) => {
     <div className="Article">
       <ArticleHeader handleModalMenu={() => handleModalMenu()} {...content} />
       <div className="article-image">
-        {content.multimedia.length > 0 ? (
+        {content && content.multimedia.length > 0 ? (
           <Image imageUrl={content.multimedia[4].url} />
         ) : null}
       </div>

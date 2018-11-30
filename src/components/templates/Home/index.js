@@ -73,17 +73,19 @@ class Home extends Component {
       modalArticleVisible,
       sectionTitle
     } = this.state;
-
     return (
       <div className="Home">
         <Header
           handleModalMenu={() => this.handleModalMenu(true)}
           sectionTitle={sectionTitle}
         />
-        <Feed
-          content={contentNews}
-          handleSelection={articleIndex => this.handleSelection(articleIndex)}
-        />
+        {contentNews && contentNews.length > 0 ? (
+          <Feed
+            content={contentNews}
+            handleSelection={articleIndex => this.handleSelection(articleIndex)}
+          />
+        ) : null}
+
         {modalMenuVisible ? (
           <ModalMenu
             handleSection={(section, sectionTitle) =>

@@ -14,12 +14,16 @@ const ArticleCard = ({
 }) => {
   return (
     <div
-      className={`ArticleCard ${multimedia[1] ? "" : "centered"}`}
+      className={`ArticleCard ${
+        multimedia && multimedia.length > 0 ? "" : "centered"
+      }`}
       onClick={() => handleSelection(index)}
     >
       <CardHeader {...{ title, byline, published_date }} />
       <div className="thumb-image">
-        {multimedia[1] ? <Thumbnail imageUrl={multimedia[1].url} /> : null}
+        {multimedia && multimedia.length > 0 ? (
+          <Thumbnail imageUrl={multimedia[1].url} />
+        ) : null}
       </div>
     </div>
   );
