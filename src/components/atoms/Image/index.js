@@ -6,7 +6,7 @@ class Image extends Component {
     const { imageUrl } = this.props;
     return (
       <div className="Image">
-        <img src={imageUrl} alt="Image" />
+        <img src={imageUrl} alt="thumbnail" />
       </div>
     );
   }

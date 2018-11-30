@@ -2,7 +2,5 @@
   "short_name": "NYTTop",
   "name": "New York Times Top News",
   "start_url": "/nyttop",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "display": "standalone"
 }

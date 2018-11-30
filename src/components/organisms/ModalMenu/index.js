@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+import CloseIcon from "../../atoms/CloseIcon";
 import "./style.scss";
 
 class ModalMenu extends Component {
   render() {
-    const { handleSection } = this.props;
+    const { handleSection, closeModal } = this.props;
     return (
       <div className="ModalMenu">
+        <div className="closeIcon">
+          <CloseIcon fill={"#fff"} handleModalMenu={() => closeModal()} />
+        </div>
         <ul className="menu">
           <li onClick={() => handleSection("science", "Ciência & Tecnologia")}>
             <span>Ciência & Tecnologia</span>

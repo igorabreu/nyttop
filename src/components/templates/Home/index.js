@@ -89,6 +89,7 @@ class Home extends Component {
             handleSection={(section, sectionTitle) =>
               this.handleSection(section, sectionTitle)
             }
+            closeModal={() => this.handleModalMenu(false)}
           />
         ) : null}
         {modalArticleVisible ? (
